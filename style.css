@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 
 body{
-    margin: 0;
+    margin:0;
     font-family: 'GFS Didot', serif;
 }
 
 body *{
     box-sizing: border-box;
+    
+}
+
+.icon{
+    position: relative;
 }
 
 .main-login {
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background: linear-gradient(#ede6e6,#fbfbfb,white,white,black);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: -10px;
 }
 
 .left-login{
@@ -93,7 +99,7 @@ body *{
     color:#b5080873;
 }
 
-.btn-login {
+.btn-register{
     width: 100%;
     padding: 16px 0;
     margin: 25px;
@@ -103,11 +109,144 @@ body *{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #641818;
-    background: rgb(245, 79, 2) ;
+    color: #fff;
+    background:#cc0000;
     cursor: pointer;
     box-shadow: 0px 10px 40px  #100202;
+
 }
+
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inputUser {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 22px;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+  
+
+.registro{
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    align-items: normal;
+    margin-left: 30%;
+}
+
+.boxcar{
+
+    border: none !important;
+    background: transparent;
+    width: 300px;
+    height: 300px;
+}
+
+.cad {
+    
+    text-align: justify;
+    width: 70px;
+    height: 70px;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.carhonda {
+
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputBox1 select{
+
+    width: 14%;
+    padding: 10px;
+    font-size: 12px;
+    font-style: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    background:transparent;
+    cursor: pointer;
+}
+
+.inputBox2 select {
+
+    width: 109%;
+    padding: 10px;
+    font-size: 12px;
+    font-style: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    background:transparent;
+    cursor: pointer;
+    
+}
+
+.container {
+    text-align: center;
+ }
+ 
+ .container label {
+    display: block;
+    margin-bottom: 10px;
+ }
+ 
+ .inputBox, .inputBox2 {
+    display: inline-block;
+        
+ }
+
+ .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  .exit-button {
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 70px; height: 40px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-style: bold;
+    font-size: 14px;
+    background-color: silver;
+
+}
+  .submit-button {
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 70px; height: 40px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+    font-style: bold;
+    font-size: 14px;
+    background-color: #cc0000;
+}
+ 
+
 
 @media only screen and (max-width: 950px) {
     .card-login{

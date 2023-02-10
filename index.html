@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"> 
 <head>
+    <link rel="shortcut icon" type="image/x-icon" href="hnd.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.html">
     <link rel="stylesheet" href="style.css">
     <title>Login - Hpoint</title>
-    <img src="imagem/icons8-honda-48.png" alt="logo honda">
+    <img class="icone" src="imagem/icons8-honda-48.png" alt="logo honda">
 </head>
 <body>
     <div class="main-login">
         <div class="left-login">
-            <h1>Faça seu Login<br>The Power of Dreams</h1>
+            <h1>Hpoint<br>Loja Itaim</h1>
             <img src="imagem/carro.svg" class="left-login-image" alt="Carro vermelho animação">
         </div>
         <div class="right-login">
@@ -19,15 +21,31 @@
                 <h1>LOGIN</h1>
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>
+                    <input type="text" name="usuario" placeholder="Usuário" required id="usuario">
             </div>
+            <div class="textfield">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="Senha" required id="senha">
+            </div>
+            <div id="error"></div>
+            <button class="btn-register" onclick="validateForm()">Login</button>
         </div>
     </div>
+</div>
+<script>
+    function validateForm() {
+        var usuario = document.getElementById("usuario").value;
+        var senha = document.getElementById("senha").value;
+        if (!usuario || !senha) {
+            document.getElementById("error").innerHTML = "Por favor, preencha todos os campos.";
+        } else {
+            redirectToCadastro();
+        }
+    }
+
+    function redirectToCadastro() {
+         window.location.href = "cadastro.html";
+    }
+</script>
 </body>
 </html>
